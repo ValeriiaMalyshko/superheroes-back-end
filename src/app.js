@@ -7,9 +7,7 @@ const heroesRouter = require('./routes/api/heroes');
 
 const app = express();
 
-const formatsLogger = app.get('env') === 'development' ? 'dev' : 'short';
-
-app.use(logger(formatsLogger));
+app.use(logger('dev'));
 app.use(cors());
 app.use(express.json());
 

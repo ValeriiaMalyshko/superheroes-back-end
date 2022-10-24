@@ -1,4 +1,5 @@
 const express = require('express');
+const router = express.Router();
 const validation = require('../../middlewares/validations');
 const heroesSchema = require('../../models/schemes');
 const ctrlWrapper = require('../../middlewares/ctrlWrapper');
@@ -10,7 +11,6 @@ const {
   getHeroById,
   updateHero,
 } = require('../../controllers');
-const router = express.Router();
 
 router.get('/', ctrlWrapper(getAllHeroes));
 router.get('/:heroId', ctrlWrapper(getHeroById));
