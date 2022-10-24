@@ -1,15 +1,13 @@
 module.exports = {
-  plugins: [
-    "regexp"
-  ],
+  plugins: ['regexp'],
   env: {
     commonjs: true,
     es2021: true,
     node: true,
   },
-  extends: ['standard', 'prettier', "plugin:regexp/no-useless-escape"],
+  extends: ['standard', 'prettier'],
   parserOptions: {
     ecmaVersion: 12,
   },
   rules: {},
-}
+};
